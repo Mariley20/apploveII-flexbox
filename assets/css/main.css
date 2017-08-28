@@ -1,0 +1,240 @@
+/* texto mayuscula*/
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+
+/*seteo*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.71429;
+    background-color: #fff;
+    margin: 0 auto;
+}
+
+/*-------header ----------*/
+header .container {
+    position: fixed;
+    background: white;
+    width: 100%;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.menu{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+a {
+    color: #373B47;
+    padding: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+a:hover {
+    color: #E95853;
+}
+.logo{
+    padding: 0 15px;
+    width: 85px;
+}
+
+
+/*-----secction home-------*/
+
+#home {
+    background-image: url('../img/bg-home.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    padding-top: 80px;
+}
+
+#home .container{
+    color: white;
+    /*padding: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;*/
+}
+
+.text-home {
+    font-size: 53px;
+}
+
+.btn-home {
+    background: #2ecc71; /*color de fondo*/
+    color: #fff;
+    padding: 11px 20px;
+    border-radius: 5px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-top: 63px;
+    font-size: 14px;
+}
+
+
+/* secction services */
+
+#services {
+    background-color: #f17c72;
+    text-align: center;
+    color: #fff;
+    padding: 70px 70px;
+}
+
+.box-services {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.box-services img{
+    padding: 10px 15px;
+}
+.text-services {
+    font-size: 35px;
+    letter-spacing: 2px;
+}
+/*------------------section work----------*/
+
+#home .container, #work{
+    padding: 70px 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#work {
+    text-align: center;   
+}
+
+.text-work {
+    font-size: 32px;
+    padding: 20px;
+    text-align: center;
+    letter-spacing: 4px;
+}
+
+.img-work {
+    background-position: center;
+    width: 100%;
+    margin: 35px 0px;
+}
+
+.box-work div{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-work img {
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+    padding: 10px 10px;
+}
+
+.box-work img:hover {
+    opacity: 0.7;
+}
+
+/*-------------------fotter ----------*/
+
+footer {
+    text-align: center;
+    height: 70px;
+    background: #373B47;
+    color: white;
+    padding-top: 7px;
+}
+/*modal*/
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding: 50px 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(46, 204, 113, 0.9);
+}
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 50%;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* nombre (alt) de la imagen */
+#caption {
+    margin: auto;
+    display: block;
+    text-align: center;
+    color: white;
+    padding: 10px 0;
+    letter-spacing: 2px;
+}
+/* Agregar animacion */
+.modal-content, #caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+@-webkit-keyframes zoom {
+    from {
+        -webkit-transform: scale(0)
+    }
+    to {
+        -webkit-transform: scale(1)
+    }
+}
+@keyframes zoom {
+    from {
+        transform: scale(0)
+    }
+    to {
+        transform: scale(1)
+    }
+}
+/* boton cerrar*/
+.close {
+    position: absolute;
+    color: #373b47;
+    font-weight: bold;
+    transition: 0.3s;
+    top: 12%;
+    right: 30%;
+    font-size: 50px;
+}
+.close:hover, .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 500px) {
+    .modal-content {
+        width: 50%;
+    }
+}
